@@ -9,6 +9,6 @@ for dotfile in .??*; do
 done
 echo $(tput setaf 2)Deploy dotfiles complete!. ✔︎$(tput sgr0)
 
-echo "Vim settings"
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-vim +PluginInstall +qall
+#echo "Vim settings"
+#git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#vim +PluginInstall +qall
