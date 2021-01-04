@@ -1,0 +1,6 @@
+.vim/*/*
+!**/.gitkeep
+!.vim/bundle/Vundle.vim
+.tmux/plugins/
+node_modules/
+/.config/

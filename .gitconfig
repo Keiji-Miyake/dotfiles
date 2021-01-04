@@ -1,0 +1,29 @@
+[user]
+    email = k.miyake01+dev@gmail.com
+	name = Keiji Miyake
+[core]
+	filemode = false
+	quotepath = false
+    autocrlf = input
+    excludesfile = ~/.gitignore
+	editor = vim
+[init]
+    defaultBranch = main
+[pull]
+    rebase = false
+[push]
+    default = current
+[alias]
+    amend = commit -v --amend
+    bk = branch -f bk
+    create = !git init && git commit --allow-empty -m 'create repo'
+    cu = checkout --no-track -b current
+    discard = stash -k -u
+    l = log --graph --decorate --oneline
+    no-skip = update-index --no-skip-worktree
+    rename = branch -m
+    s = status -b -s
+    skip = update-index --skip-worktree
+    sync = reset --hard
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe

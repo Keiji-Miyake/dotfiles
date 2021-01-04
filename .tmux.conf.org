@@ -1,0 +1,65 @@
+set -ag terminal-overrides ',*:U8=0'
+set -g default-terminal "screen-256color"
+
+# マウス操作を有効にする
+# setw -g mouse on
+
+# ウィンドウのインデックスを１から始める
+# set -g base-index 1
+
+# ペインのインデックスを１から始める
+# setw -g pane-base-index 1
+
+# 設定ファイルをリロードする
+bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+# \でペインを縦分割
+bind \ split-window -h
+
+# -でペインを横分割
+bind - split-window -v
+
+# プレフィックスをC-tに変更
+set-option -g prefix C-t
+
+# Vimのキーバインドでペインを移動する
+bind -r k select-pane -U
+bind -r j select-pane -D
+bind -r h select-pane -L
+bind -r l select-pane -R
+bind -r C-h select-window -t :-
+bind -r C-l select-window -t :+
+
+# Vimのキーバインドでペインをリサイズする
+bind -r K resize-pane -U 5
+bind -r J resize-pane -D 5
+bind -r H resize-pane -L 5
+bind -r L resize-pane -R 5
+
+# コピーモードの設定（Vim風にする）
+setw -g mode-keys vi
+
+# 最後までスクロールダウンするとコピーモードを抜ける
+bind-key -n WheelDownPane select-pane -t = \; send-keys -M
+
+#ステータスバーをトップに配置する
+set-option -g status-position top
+
+# #H => マシン名
+# #P => ペイン番号
+# 最左に表示
+set-option -g status-left '#H:[#P]'
+
+# ステータスバーを１秒毎に描画し直す
+set-option -g status-interval 1
+
+# Wi-Fi、バッテリー残量、現在時刻
+# 最右に表示
+# set-option -g status-right '#(get_ssid) #(wifi) #(battery -c tmux) [%Y-%m-%d(%a) %H:%M]'
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run -b '~/.tmux/plugins/tpm/tpm'
