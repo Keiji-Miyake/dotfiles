@@ -1,6 +1,6 @@
 [user]
     email = k.miyake01+dev@gmail.com
-	name = Keiji Miyake
+	name = m-miyake
 [core]
 	filemode = false
 	quotepath = false
@@ -10,7 +10,7 @@
 [init]
     defaultBranch = main
 [pull]
-    rebase = false
+	rebase = merges
 [push]
     default = current
 [alias]
@@ -27,3 +27,5 @@
     sync = reset --hard
 [credential]
 	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+[merge]
+	ff = false
