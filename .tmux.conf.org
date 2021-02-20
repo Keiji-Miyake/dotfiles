@@ -63,3 +63,9 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run -b '~/.tmux/plugins/tpm/tpm'
+
+# C-a 解除
+unbind C-a
+
+# Windows share clipboard
+if-shell -b 'test -n "$WSLENV"' 'bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel clip.exe'

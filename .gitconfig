@@ -1,16 +1,16 @@
 [user]
     email = k.miyake01+dev@gmail.com
-	name = m-miyake
+    name = m-miyake
 [core]
-	filemode = false
-	quotepath = false
+    filemode = false
+    quotepath = false
     autocrlf = input
     excludesfile = ~/.gitignore
-	editor = vim
+    editor = vim
 [init]
     defaultBranch = main
 [pull]
-	rebase = merges
+    rebase = merges
 [push]
     default = current
 [alias]
@@ -26,6 +26,8 @@
     skip = update-index --skip-worktree
     sync = reset --hard
 [credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+    helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
 [merge]
-	ff = false
+    ff = false
+[pager]
+	branch = false
