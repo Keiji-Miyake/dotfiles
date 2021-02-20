@@ -1,5 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='/home/dev/dotfiles/.vim/bundle/Vundle.vim'
-let g:netrw_dirhist_2='/home/keiji/.ssh'
-let g:netrw_dirhist_1='/home/keiji'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/debian/dotfiles/.vim/bundle/Vundle.vim'
