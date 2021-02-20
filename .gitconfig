@@ -7,6 +7,7 @@
     autocrlf = input
     excludesfile = ~/.gitignore
     editor = vim
+	pager = less -F -X
 [init]
     defaultBranch = main
 [pull]
