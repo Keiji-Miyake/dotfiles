@@ -27,10 +27,6 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 export PATH="$PATH:$HOME/.local/bin"
 
-# set wsl-ssh-agent
-SSH_AUTH_SOCK=/mnt/c/Apps/wsl-ssh-agent/ssh-agent.sock
-export SSH_AUTH_SOCK
-
 # path settigs
 if [ "$(uname)" == 'Darwin' ]; then
     export PATH=/usr/local/bin:$PATH
@@ -58,3 +54,10 @@ if type brew &>/dev/null; then
         done
     fi
 fi
+
+if grep -qE "(Microsoft|WSL)" /proc/version &>/dev/null; then
+    # set wsl-ssh-agent
+    SSH_AUTH_SOCK=/mnt/c/Apps/wsl-ssh-agent/ssh-agent.sock
+    export SSH_AUTH_SOCK
+fi
+
