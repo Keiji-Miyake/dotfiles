@@ -1,16 +1,17 @@
 [user]
-    email = k.miyake01+dev@gmail.com
-	name = Keiji Miyake
+	email = k.miyake01+dev@gmail.com
+	name = Keiji-Miyake
 [core]
-	filemode = false
-	quotepath = false
+    filemode = false
+    quotepath = false
     autocrlf = input
     excludesfile = ~/.gitignore
-	editor = vim
+    editor = vim
+	pager = less -F -X
 [init]
     defaultBranch = main
 [pull]
-    rebase = false
+    rebase = merges
 [push]
     default = current
 [alias]
@@ -26,4 +27,8 @@
     skip = update-index --skip-worktree
     sync = reset --hard
 [credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+    helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+[merge]
+    ff = false
+[pager]
+	branch = false
